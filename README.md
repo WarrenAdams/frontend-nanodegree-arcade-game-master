@@ -4,13 +4,13 @@
 This is a simple arcade similar to the classic Frogger game.
 
 ## Installation
-===============================
+
 
 Clone the GitHub repository and open the `index.html` in a browser.
 
 
 ## Usage
-===============================
+
 
 + Use the `arrow` keys to move the player around the screen.
 
