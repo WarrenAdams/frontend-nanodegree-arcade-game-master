@@ -78,6 +78,11 @@ var Engine = (function(global) {
      * functionality this way (you could just implement collision detection
      * on the entities themselves within your app.js file).
      */
+
+
+     // This function checks for collision by measuring the distance between
+     // the player and the enemy.
+
      function checkCollisions (){
        allEnemies.forEach(function(enemy){
          var distanceX = enemy.x - player.x;
@@ -87,6 +92,8 @@ var Engine = (function(global) {
          }
        });
      }
+
+     //when the player is at the top of the board an alert will appear and reset the player.
 
      function endGame(){
        if(player.y === -30){
@@ -176,10 +183,7 @@ var Engine = (function(global) {
         player.render();
     }
 
-    /* This function does nothing but it could have been a good place to
-     * handle game reset states - maybe a new game menu or a game over screen
-     * those sorts of things. It's only called once by the init() method.
-     */
+    // This function resets the player to the original coordinates.
     function reset() {
       player.x = 200;
       player.y = 420;
