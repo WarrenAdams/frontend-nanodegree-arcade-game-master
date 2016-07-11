@@ -8,18 +8,17 @@ var Enemy = function(x,y) {
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
 };
+
 /*
   This function update the enemy's position.The parameter: dt,
   a time delta between ticks is multiplied by any movement
   which will ensure the game runs at the same speed for
   all computers. Also this function randomizes the enemies speed
-  and spawn location. 
+  and spawn location.
 */
 
 Enemy.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
+
     if(this.x > 500 && this.speed > 400){
       this.x = Math.random() * -300;
       this.speed = 600 * dt;
@@ -100,10 +99,9 @@ var allEnemies = [bugEnemy,bugEnemy2,bugEnemy3];
 
 
 
-
-
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
+
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
